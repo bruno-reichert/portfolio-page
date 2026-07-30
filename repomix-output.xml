@@ -52,6 +52,14 @@ portfolio-page/
       hero.png
       react.svg
       vite.svg
+    components/
+      About.jsx
+      Certifications.jsx
+      Contact.jsx
+      Footer.jsx
+      Header.jsx
+      Hero.jsx
+      Projects.jsx
     hooks/
       useLanguage.js
       useTheme.js
@@ -69,6 +77,7 @@ portfolio-page/
   vite.config.js
 .gitattributes
 LICENSE
+phase2p1.sh
 README.md
 </directory_structure>
 
@@ -169,6 +178,186 @@ jobs:
 <svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
 </file>
 
+<file path="portfolio-page/src/components/About.jsx">
+import React from 'react';
+
+export default function About() {
+  return (
+    <section id="about" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>B1 · Sobre</div>
+      <h1>About Section Placeholder</h1>
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Certifications.jsx">
+import React from 'react';
+
+export default function Certifications() {
+  return (
+    <section id="certifications" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>D1 · Certificações</div>
+      <h1>Certifications Section Placeholder</h1>
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Contact.jsx">
+import React from 'react';
+
+export default function Contact() {
+  return (
+    <section id="contact" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>E1 · Contato</div>
+      <h1>Contact Section Placeholder</h1>
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Footer.jsx">
+import React from 'react';
+
+export default function Footer() {
+  return (
+    <footer style={{ padding: '20px', textAlign: 'center' }}>
+      <p>Footer Placeholder</p>
+    </footer>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Header.jsx">
+import React from 'react';
+import { translations } from '../i18n';
+
+export default function Header({ theme, toggleTheme, language, toggleLanguage }) {
+  const navText = translations[language].nav;
+
+  return (
+    <header className="site-header">
+      <div className="header-container">
+        
+        {/* Terminal Logo */}
+        <a href="#hero" className="terminal-logo">
+          <span className="prompt-symbol">&gt;</span>
+          <span className="prompt-user">bruno</span>
+          <span className="prompt-cursor">_</span>
+        </a>
+
+        {/* Dynamic Navigation Links */}
+        <nav className="header-nav">
+          <ul className="nav-list">
+            <li>
+              <a href="#about" className="nav-link">
+                <span className="nav-bullet">//</span> {navText.about}
+              </a>
+            </li>
+            <li>
+              <a href="#projects" className="nav-link">
+                <span className="nav-bullet">//</span> {navText.projects}
+              </a>
+            </li>
+            <li>
+              <a href="#certifications" className="nav-link">
+                <span className="nav-bullet">//</span> {navText.certifications}
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="nav-link">
+                <span className="nav-bullet">//</span> {navText.contact}
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Header Controls (Theme & Language switches) */}
+        <div className="header-controls">
+          
+          {/* Language Switcher (PT / EN toggle option) */}
+          <div className="lang-switcher">
+            <button 
+              onClick={() => toggleLanguage()} 
+              className={`control-btn lang-btn ${language === 'pt' ? 'active' : ''}`}
+              aria-label="Mudar idioma para Português"
+            >
+              PT
+            </button>
+            <span className="control-divider">/</span>
+            <button 
+              onClick={() => toggleLanguage()} 
+              className={`control-btn lang-btn ${language === 'en' ? 'active' : ''}`}
+              aria-label="Switch language to English"
+            >
+              EN
+            </button>
+          </div>
+
+          <span className="controls-separator">|</span>
+
+          {/* Theme Switcher Button (Sun/Moon Toggle) */}
+          <button 
+            onClick={toggleTheme} 
+            className="control-btn theme-btn"
+            aria-label={theme === 'light' ? 'Mudar para tema escuro' : 'Switch to light theme'}
+          >
+            {theme === 'light' ? (
+              /* Moon Icon */
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="theme-icon">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            ) : (
+              /* Sun Icon */
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="theme-icon">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            )}
+          </button>
+
+        </div>
+
+      </div>
+    </header>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Hero.jsx">
+import React from 'react';
+
+export default function Hero() {
+  return (
+    <section id="hero" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>A1 · Início</div>
+      <h1>Hero Section Placeholder</h1>
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Projects.jsx">
+import React from 'react';
+
+export default function Projects() {
+  return (
+    <section id="projects" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>C1 · Projetos</div>
+      <h1>Projects Section Placeholder</h1>
+    </section>
+  );
+}
+</file>
+
 <file path="portfolio-page/src/hooks/useLanguage.js">
 import { useState, useEffect } from 'react';
 
@@ -222,318 +411,6 @@ export function useTheme() {
 
   return { theme, toggleTheme };
 }
-</file>
-
-<file path="portfolio-page/src/App.css">
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
-}
-</file>
-
-<file path="portfolio-page/src/App.jsx">
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
-}
-
-export default App
 </file>
 
 <file path="portfolio-page/src/data.js">
@@ -1023,9 +900,403 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 </file>
 
+<file path="phase2p1.sh">
+# 1. Create the components directory inside your React project
+mkdir -p portfolio-page/src/components
+
+# 2. Create Header.jsx shell
+cat << 'EOF' > portfolio-page/src/components/Header.jsx
+import React from 'react';
+
+export default function Header() {
+  return (
+    <header style={{ padding: '20px', borderBottom: '1px solid var(--border)' }}>
+      <nav>
+        <span>&gt; bruno</span> | Navigation Placeholder
+      </nav>
+    </header>
+  );
+}
+EOF
+
+# 3. Create Hero.jsx shell
+cat << 'EOF' > portfolio-page/src/components/Hero.jsx
+import React from 'react';
+
+export default function Hero() {
+  return (
+    <section id="hero" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>A1 · Início</div>
+      <h1>Hero Section Placeholder</h1>
+    </section>
+  );
+}
+EOF
+
+# 4. Create About.jsx shell
+cat << 'EOF' > portfolio-page/src/components/About.jsx
+import React from 'react';
+
+export default function About() {
+  return (
+    <section id="about" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>B1 · Sobre</div>
+      <h1>About Section Placeholder</h1>
+    </section>
+  );
+}
+EOF
+
+# 5. Create Projects.jsx shell
+cat << 'EOF' > portfolio-page/src/components/Projects.jsx
+import React from 'react';
+
+export default function Projects() {
+  return (
+    <section id="projects" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>C1 · Projetos</div>
+      <h1>Projects Section Placeholder</h1>
+    </section>
+  );
+}
+EOF
+
+# 6. Create Certifications.jsx shell
+cat << 'EOF' > portfolio-page/src/components/Certifications.jsx
+import React from 'react';
+
+export default function Certifications() {
+  return (
+    <section id="certifications" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>D1 · Certificações</div>
+      <h1>Certifications Section Placeholder</h1>
+    </section>
+  );
+}
+EOF
+
+# 7. Create Contact.jsx shell
+cat << 'EOF' > portfolio-page/src/components/Contact.jsx
+import React from 'react';
+
+export default function Contact() {
+  return (
+    <section id="contact" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
+      <div>E1 · Contato</div>
+      <h1>Contact Section Placeholder</h1>
+    </section>
+  );
+}
+EOF
+
+# 8. Create Footer.jsx shell
+cat << 'EOF' > portfolio-page/src/components/Footer.jsx
+import React from 'react';
+
+export default function Footer() {
+  return (
+    <footer style={{ padding: '20px', textAlign: 'center' }}>
+      <p>Footer Placeholder</p>
+    </footer>
+  );
+}
+EOF
+
+echo "All component shells have been successfully created inside portfolio-page/src/components!"
+</file>
+
 <file path="README.md">
 # portfolio page
 portfolio page
+</file>
+
+<file path="portfolio-page/src/App.css">
+/* Layout Containers */
+main {
+  width: 100%;
+  max-width: 1120px; /* Standard readable width for content */
+  margin: 0 auto;    /* Centers the layout horizontally */
+  padding: 0 24px;   /* Safe padding on the left and right for mobile screens */
+}
+
+/* Base Styles for each Section */
+section {
+  padding: 80px 0; /* Creates generous breathing room above and below sections */
+  border-bottom: 1px solid var(--border); /* Subtle line separating sections */
+  scroll-margin-top: 80px; /* Prevents sticky headers from covering titles when scrolling */
+}
+
+/* Eyebrow Cell Reference Styling (JetBrains Mono) */
+section > div:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Section Title Typography (Source Serif 4) */
+section h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+/* Navigation & Header Alignment Base */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition-theme);
+}
+
+/* Footer layout */
+footer {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0; /* Slightly tighter spacing on tablets/mobile */
+  }
+
+  section h1 {
+    font-size: 2rem; /* Scale down titles for smaller screens */
+  }
+}
+
+/* Header Container & Flex Alignment */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition-theme);
+}
+
+.header-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Terminal Logo Link */
+.terminal-logo {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: -0.02em;
+}
+
+.prompt-symbol {
+  color: var(--accent); /* Teal/Accent color */
+}
+
+.prompt-user {
+  color: var(--ink);
+}
+
+/* Blinking Cursor Animation */
+.prompt-cursor {
+  color: var(--accent-alt); /* Amber color for the active cursor */
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: var(--accent-alt) }
+}
+
+/* Header Controls Layout */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* Base button rules for toggles */
+.control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-muted);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.control-btn:hover {
+  color: var(--ink);
+}
+
+/* Language selector option states */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.control-divider {
+  color: var(--border);
+  padding: 0 4px;
+  user-select: none;
+}
+
+.controls-separator {
+  color: var(--border);
+  user-select: none;
+}
+
+/* SVG Theme Icon sizing and look */
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.theme-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Custom interactive state focus styles */
+.control-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  border-radius: 4px;
+}
+
+/* Navigation List Arrangement */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+/* Individual Links Styling */
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+/* Accent bullet styling (double slash "//") */
+.nav-bullet {
+  color: var(--accent);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+/* Hover and active interactive states */
+.nav-link:hover {
+  color: var(--ink);
+}
+
+.nav-link:hover .nav-bullet {
+  color: var(--accent-alt);
+  opacity: 1;
+}
+
+/* Hide navigation inside ultra-small mobile views (will stack natively) */
+@media (max-width: 640px) {
+  .header-nav {
+    display: none; /* We will stack nicely later or keep it minimal */
+  }
+}
+</file>
+
+<file path="portfolio-page/src/App.jsx">
+import React from 'react';
+import { useTheme } from './hooks/useTheme';
+import { useLanguage } from './hooks/useLanguage';
+
+// Import component shells
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+// Styling
+import './App.css';
+
+function App() {
+  const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage } = useLanguage();
+
+  return (
+    <>
+      {/* 
+        The Header receives the theme/language state and their toggle functions
+        so the user can interact with the switch controls.
+      */}
+      <Header 
+        theme={theme} 
+        toggleTheme={toggleTheme} 
+        language={language} 
+        toggleLanguage={toggleLanguage} 
+      />
+      
+      {/* Main layout container wrapping all sections sequentially */}
+      <main>
+        <Hero language={language} />
+        <About language={language} />
+        <Projects language={language} />
+        <Certifications language={language} />
+        <Contact language={language} />
+      </main>
+
+      <Footer language={language} />
+    </>
+  );
+}
+
+export default App;
 </file>
 
 </files>
