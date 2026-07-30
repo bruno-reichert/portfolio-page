@@ -1,184 +1,235 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
+/* Layout Containers */
+main {
   width: 100%;
+  max-width: 1120px; /* Standard readable width for content */
+  margin: 0 auto;    /* Centers the layout horizontally */
+  padding: 0 24px;   /* Safe padding on the left and right for mobile screens */
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
+/* Base Styles for each Section */
+section {
+  padding: 80px 0; /* Creates generous breathing room above and below sections */
+  border-bottom: 1px solid var(--border); /* Subtle line separating sections */
+  scroll-margin-top: 80px; /* Prevents sticky headers from covering titles when scrolling */
+}
+
+/* Eyebrow Cell Reference Styling (JetBrains Mono) */
+section > div:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Section Title Typography (Source Serif 4) */
+section h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+/* Navigation & Header Alignment Base */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition-theme);
+}
+
+/* Footer layout */
+footer {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0; /* Slightly tighter spacing on tablets/mobile */
   }
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
+  section h1 {
+    font-size: 2rem; /* Scale down titles for smaller screens */
   }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+}
+
+/* Header Container & Flex Alignment */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition-theme);
+}
+
+.header-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Terminal Logo Link */
+.terminal-logo {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: -0.02em;
+}
+
+.prompt-symbol {
+  color: var(--accent); /* Teal/Accent color */
+}
+
+.prompt-user {
+  color: var(--ink);
+}
+
+/* Blinking Cursor Animation */
+.prompt-cursor {
+  color: var(--accent-alt); /* Amber color for the active cursor */
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: var(--accent-alt) }
+}
+
+/* Header Controls Layout */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* Base button rules for toggles */
+.control-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-muted);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.control-btn:hover {
+  color: var(--ink);
+}
+
+/* Language selector option states */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.control-divider {
+  color: var(--border);
+  padding: 0 4px;
+  user-select: none;
+}
+
+.controls-separator {
+  color: var(--border);
+  user-select: none;
+}
+
+/* SVG Theme Icon sizing and look */
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.theme-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Custom interactive state focus styles */
+.control-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  border-radius: 4px;
+}
+
+/* Navigation List Arrangement */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+/* Individual Links Styling */
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+/* Accent bullet styling (double slash "//") */
+.nav-bullet {
+  color: var(--accent);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+/* Hover and active interactive states */
+.nav-link:hover {
+  color: var(--ink);
+}
+
+.nav-link:hover .nav-bullet {
+  color: var(--accent-alt);
+  opacity: 1;
+}
+
+/* Hide navigation inside ultra-small mobile views (will stack natively) */
+@media (max-width: 640px) {
+  .header-nav {
+    display: none; /* We will stack nicely later or keep it minimal */
   }
 }

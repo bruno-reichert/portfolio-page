@@ -40,6 +40,9 @@ The content is organized as follows:
 </file_summary>
 
 <directory_structure>
+.github/
+  workflows/
+    deploy.yml
 portfolio-page/
   public/
     favicon.svg
@@ -49,8 +52,13 @@ portfolio-page/
       hero.png
       react.svg
       vite.svg
+    hooks/
+      useLanguage.js
+      useTheme.js
     App.css
     App.jsx
+    data.js
+    i18n.js
     index.css
     main.jsx
   .gitignore
@@ -66,6 +74,61 @@ README.md
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path=".github/workflows/deploy.yml">
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: 'portfolio-page/package.json'
+
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: portfolio-page
+
+      - name: Build Application
+        run: npm run build
+        working-directory: portfolio-page
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './portfolio-page/dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+</file>
 
 <file path="portfolio-page/public/favicon.svg">
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
@@ -104,6 +167,61 @@ This section contains the contents of the repository's files.
 
 <file path="portfolio-page/src/assets/vite.svg">
 <svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="portfolio-page/src/hooks/useLanguage.js">
+import { useState, useEffect } from 'react';
+
+export function useLanguage() {
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem('lang');
+    if (savedLanguage) {
+      return savedLanguage;
+    }
+    // Default fallback to Portuguese
+    return 'pt';
+  });
+
+  useEffect(() => {
+    const html = document.documentElement;
+    html.setAttribute('lang', language);
+    localStorage.setItem('lang', language);
+  }, [language]);
+
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === 'pt' ? 'en' : 'pt'));
+  };
+
+  return { language, setLanguage, toggleLanguage };
+}
+</file>
+
+<file path="portfolio-page/src/hooks/useTheme.js">
+import { useState, useEffect } from 'react';
+
+export function useTheme() {
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme;
+    }
+    // Fallback to system preference
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    return mediaQuery.matches ? 'dark' : 'light';
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  return { theme, toggleTheme };
+}
 </file>
 
 <file path="portfolio-page/src/App.css">
@@ -418,117 +536,316 @@ function App() {
 export default App
 </file>
 
+<file path="portfolio-page/src/data.js">
+export const projectsData = {
+    pt: [
+      {
+        id: "fastapi-genai",
+        title: "fastapi-genai-project",
+        tags: ["Python", "FastAPI", "GroqCloud (Llama 3.3)", "PostgreSQL", "Docker", "RAG"],
+        description: "Assistente de pesquisa com RAG (Retrieval-Augmented Generation) para consultas em linguagem natural sobre documentos financeiros, com respostas fundamentadas e citações verificáveis. Envolveu migrar toda a stack de IA de modelos pagos (OpenAI) para uma alternativa gratuita (GroqCloud/Llama), exigindo reimplementar a lógica de extração de respostas estruturadas.",
+        github: "https://github.com/bruno-reichert/fastapi-genai-project",
+        demo: null
+      },
+      {
+        id: "bookly",
+        title: "Bookly",
+        tags: ["Python", "FastAPI", "SQLModel", "PostgreSQL", "JWT", "Pytest"],
+        description: "API REST para um serviço de avaliações de livros, com autenticação JWT, tratamento de exceções customizado, testes automatizados, e migrações de banco de dados via Alembic. Adaptada para funcionar sem tarefas assíncronas em background, devido a limitações do plano gratuito da plataforma de deploy.",
+        github: "https://github.com/bruno-reichert/fastapi-beyond-CRUD",
+        demo: null
+      },
+      {
+        id: "fastapi-webapp",
+        title: "FastAPI-Web-App",
+        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Google Cloud Run"],
+        description: "Aplicação web full-stack de blog, construída inteiramente com FastAPI — back-end e frontend (renderizado no servidor) na mesma aplicação Python. Inclui autenticação, recuperação de senha por e-mail, upload de foto de perfil via Amazon S3, e deploy em produção via Docker e Google Cloud Run.",
+        github: "https://github.com/bruno-reichert/FastAPI-Web-App",
+        demo: "https://fastapi-service-605488623154.us-east4.run.app/"
+      },
+      {
+        id: "react-course",
+        title: "react-course (App de Filmes)",
+        tags: ["React", "Vite", "TailwindCSS", "TMDB API", "Appwrite"],
+        description: "Aplicação de descoberta de filmes construída com React e Vite, consumindo a API do TMDB, com um algoritmo de tendências baseado em buscas dos usuários via Appwrite.",
+        github: "https://github.com/bruno-reichert/react-course",
+        demo: null
+      }
+    ],
+    en: [
+      {
+        id: "fastapi-genai",
+        title: "fastapi-genai-project",
+        tags: ["Python", "FastAPI", "GroqCloud (Llama 3.3)", "PostgreSQL", "Docker", "RAG"],
+        description: "A RAG (Retrieval-Augmented Generation) research assistant for natural-language queries over financial documents, returning grounded, citable answers. Involved migrating the entire AI stack from paid models (OpenAI) to a free alternative (GroqCloud/Llama), which required rebuilding the structured-answer extraction logic from scratch.",
+        github: "https://github.com/bruno-reichert/fastapi-genai-project",
+        demo: null
+      },
+      {
+        id: "bookly",
+        title: "Bookly",
+        tags: ["Python", "FastAPI", "SQLModel", "PostgreSQL", "JWT", "Pytest"],
+        description: "A REST API for a book review service, with JWT authentication, custom exception handling, automated tests, and database migrations via Alembic. Adapted to run without background async tasks due to free-tier deployment platform limitations.",
+        github: "https://github.com/bruno-reichert/fastapi-beyond-CRUD",
+        demo: null
+      },
+      {
+        id: "fastapi-webapp",
+        title: "FastAPI-Web-App",
+        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Google Cloud Run"],
+        description: "A full-stack blog web app built entirely with FastAPI — back-end and server-rendered front-end in the same Python application. Includes authentication, email password recovery, profile picture uploads via Amazon S3, and a production deploy via Docker and Google Cloud Run.",
+        github: "https://github.com/bruno-reichert/FastAPI-Web-App",
+        demo: "https://fastapi-service-605488623154.us-east4.run.app/"
+      },
+      {
+        id: "react-course",
+        title: "react-course (Movie App)",
+        tags: ["React", "Vite", "TailwindCSS", "TMDB API", "Appwrite"],
+        description: "A movie discovery app built with React and Vite, consuming the TMDB API, with a trending-searches algorithm powered by Appwrite.",
+        github: "https://github.com/bruno-reichert/react-course",
+        demo: null
+      }
+    ]
+  };
+  
+  export const certificationsData = {
+    pt: [
+      {
+        title: "Cientista de Dados Associado em Python",
+        date: "Em curso",
+        description: "Pandas, NumPy, Matplotlib, Seaborn, estatística, introdução a machine learning.",
+        url: null,
+        inProgress: true
+      },
+      {
+        title: "Python Developer",
+        date: "Out. 2025",
+        description: "Estruturas de dados e algoritmos, complexidade, POO avançada.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/ef6134b92b67f405cba1b9f7d0c354e38c35d947", // Example credential placeholder
+        inProgress: false
+      },
+      {
+        title: "Associate Python Developer",
+        date: "Set. 2025",
+        description: "POO, decorators, context managers, regex.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/d90e9d6d5b06f52a788e0ab41f48744b1c855ba6",
+        inProgress: false
+      },
+      {
+        title: "Python Programming",
+        date: "Set. 2025",
+        description: "Módulos, iteradores, list comprehensions.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/8e906e788c0350d7a6e1a4dfcb2983bf9e2c4cb7",
+        inProgress: false
+      },
+      {
+        title: "Python Programming Fundamentals",
+        date: "Ago. 2025",
+        description: "Fundamentos da linguagem.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4bf6db4a5b48e3d0628bc73ca55307ab886c90b6",
+        inProgress: false
+      },
+      {
+        title: "Associate AI Engineer for Developers",
+        date: "Jul. 2025",
+        description: "LLMs via API, prompt engineering, embeddings, RAG, LangChain.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4c3f7cb85b06f52e5a88e0ab41f4875a1c865fa7",
+        inProgress: false
+      }
+    ],
+    en: [
+      {
+        title: "Associate Data Scientist in Python",
+        date: "In progress",
+        description: "Pandas, NumPy, Matplotlib, Seaborn, statistics, introduction to machine learning.",
+        url: null,
+        inProgress: true
+      },
+      {
+        title: "Python Developer",
+        date: "Oct. 2025",
+        description: "Data structures and algorithms, time complexity, advanced OOP.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/ef6134b92b67f405cba1b9f7d0c354e38c35d947",
+        inProgress: false
+      },
+      {
+        title: "Associate Python Developer",
+        date: "Sep. 2025",
+        description: "OOP, decorators, context managers, regex.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/d90e9d6d5b06f52a788e0ab41f48744b1c855ba6",
+        inProgress: false
+      },
+      {
+        title: "Python Programming",
+        date: "Sep. 2025",
+        description: "Modules, iterators, list comprehensions.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/8e906e788c0350d7a6e1a4dfcb2983bf9e2c4cb7",
+        inProgress: false
+      },
+      {
+        title: "Python Programming Fundamentals",
+        date: "Aug. 2025",
+        description: "Language fundamentals.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4bf6db4a5b48e3d0628bc73ca55307ab886c90b6",
+        inProgress: false
+      },
+      {
+        title: "Associate AI Engineer for Developers",
+        date: "Jul. 2025",
+        description: "LLMs via API, prompt engineering, embeddings, RAG, LangChain.",
+        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4c3f7cb85b06f52e5a88e0ab41f4875a1c865fa7",
+        inProgress: false
+      }
+    ]
+  };
+</file>
+
+<file path="portfolio-page/src/i18n.js">
+export const translations = {
+    pt: {
+      nav: {
+        about: "Sobre",
+        projects: "Projetos",
+        certifications: "Certificações",
+        contact: "Contato"
+      },
+      hero: {
+        tagline: "Desenvolvedor Back-end & Analista de Dados",
+        subline: "Formado em Administração pela UFRGS, com formação técnica paralela em desenvolvimento back-end e análise de dados.",
+        ctaProjects: "Ver Projetos",
+        ctaGithub: "GitHub",
+        ctaLinkedin: "LinkedIn"
+      },
+      about: {
+        title: "Sobre",
+        text: "Sempre gostei de aprender coisas novas em ramos variados, o que me levou a uma formação em Administração — e meu fascínio por tecnologia me levou à programação. Hoje combino a visão de negócio da minha formação acadêmica com a capacidade técnica de construir soluções reais: de APIs REST com autenticação e bancos de dados a aplicações de IA generativa com RAG. Minha monografia (TCC), sobre uso de IA generativa e integridade acadêmica, foi aprovada com louvor e selecionada para o Salão de Ensino UFRGS 2026. Todos os meus cursos técnicos (DataCamp) foram concluídos integralmente em inglês fluente."
+      },
+      projects: {
+        title: "Projetos",
+        datacampLink: "Veja também: 10 projetos aplicados das minhas certificações DataCamp",
+        demoLink: "Demo ao vivo",
+        codeLink: "Código"
+      },
+      certifications: {
+        title: "Certificações",
+        note: "Todos os cursos concluídos integralmente em inglês.",
+        statusEnCourse: "(em curso)"
+      },
+      contact: {
+        title: "Contato",
+        location: "Porto Alegre, Rio Grande do Sul, Brasil"
+      },
+      footer: {
+        backToTop: "Voltar ao topo"
+      }
+    },
+    en: {
+      nav: {
+        about: "About",
+        projects: "Projects",
+        certifications: "Certifications",
+        contact: "Contact"
+      },
+      hero: {
+        tagline: "Back-end Developer & Data Analyst",
+        subline: "Business Administration graduate (UFRGS), with a parallel technical background in back-end development and data analysis.",
+        ctaProjects: "View Projects",
+        ctaGithub: "GitHub",
+        ctaLinkedin: "LinkedIn"
+      },
+      about: {
+        title: "About",
+        text: "I've always enjoyed learning across different fields, which led me to a degree in Business Administration — and my fascination with technology led me into programming. Today I combine the business perspective from my degree with the technical ability to build real solutions: from REST APIs with authentication and databases to generative AI applications using RAG. My undergraduate thesis, on generative AI use and academic integrity, was approved with distinction and selected for presentation at Salão de Ensino UFRGS 2026. All of my technical coursework (DataCamp) was completed entirely in fluent English."
+      },
+      projects: {
+        title: "Projects",
+        datacampLink: "See also: 10 applied projects from my DataCamp certifications",
+        demoLink: "Live Demo",
+        codeLink: "Code"
+      },
+      certifications: {
+        title: "Certifications",
+        note: "All courses completed entirely in English.",
+        statusEnCourse: "(in progress)"
+      },
+      contact: {
+        title: "Contact",
+        location: "Porto Alegre, Rio Grande do Sul, Brazil"
+      },
+      footer: {
+        backToTop: "Back to top"
+      }
+    }
+  };
+</file>
+
 <file path="portfolio-page/src/index.css">
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+/* Color Palette & Variables declaration */
+:root[data-theme="light"] {
+  --bg: #EEF0EA;
+  --bg-alt: #E4E7DE;
+  --ink: #1B2430;
+  --ink-muted: #4A5568;
+  --accent: #2F6F5E;
+  --accent-alt: #B8862B;
+  --border: #D3D7CC;
+  --terminal-prompt: #2F6F5E;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+:root[data-theme="dark"] {
+  --bg: #12181F;
+  --bg-alt: #1A222C;
+  --ink: #E7E9E4;
+  --ink-muted: #9CA8B5;
+  --accent: #4FAF95;
+  --accent-alt: #D9A54B;
+  --border: #2A333E;
+  --terminal-prompt: #4FAF95;
+}
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+:root {
+  /* Font families */
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Global transitions for theme toggle */
+  --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Document Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  transition: var(--transition-theme);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+/* Generic Focus States for Accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 </file>
 
@@ -598,12 +915,17 @@ export default defineConfig([
 
 <file path="portfolio-page/index.html">
 <!doctype html>
-<html lang="en">
+<html lang="pt" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-page</title>
+    <title>Bruno Benno Reichert — Portfolio</title>
+    
+    <!-- Google Fonts Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="root"></div>
@@ -668,6 +990,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/portfolio-page/',
 })
 </file>
 
