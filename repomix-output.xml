@@ -45,6 +45,12 @@ The content is organized as follows:
     deploy.yml
 portfolio-page/
   public/
+    credentials/
+      associateaiengineerfordevs.pdf
+      assocpythondev.pdf
+      pythondeveloper.pdf
+      pythonprogramming.pdf
+      pythonprogrammingfundamentals.pdf
     favicon.svg
     icons.svg
   src/
@@ -77,7 +83,6 @@ portfolio-page/
   vite.config.js
 .gitattributes
 LICENSE
-phase2p1.sh
 README.md
 </directory_structure>
 
@@ -176,57 +181,6 @@ jobs:
 
 <file path="portfolio-page/src/assets/vite.svg">
 <svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
-</file>
-
-<file path="portfolio-page/src/components/About.jsx">
-import React from 'react';
-
-export default function About() {
-  return (
-    <section id="about" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>B1 · Sobre</div>
-      <h1>About Section Placeholder</h1>
-    </section>
-  );
-}
-</file>
-
-<file path="portfolio-page/src/components/Certifications.jsx">
-import React from 'react';
-
-export default function Certifications() {
-  return (
-    <section id="certifications" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>D1 · Certificações</div>
-      <h1>Certifications Section Placeholder</h1>
-    </section>
-  );
-}
-</file>
-
-<file path="portfolio-page/src/components/Contact.jsx">
-import React from 'react';
-
-export default function Contact() {
-  return (
-    <section id="contact" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>E1 · Contato</div>
-      <h1>Contact Section Placeholder</h1>
-    </section>
-  );
-}
-</file>
-
-<file path="portfolio-page/src/components/Footer.jsx">
-import React from 'react';
-
-export default function Footer() {
-  return (
-    <footer style={{ padding: '20px', textAlign: 'center' }}>
-      <p>Footer Placeholder</p>
-    </footer>
-  );
-}
 </file>
 
 <file path="portfolio-page/src/components/Header.jsx">
@@ -332,32 +286,6 @@ export default function Header({ theme, toggleTheme, language, toggleLanguage })
 }
 </file>
 
-<file path="portfolio-page/src/components/Hero.jsx">
-import React from 'react';
-
-export default function Hero() {
-  return (
-    <section id="hero" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>A1 · Início</div>
-      <h1>Hero Section Placeholder</h1>
-    </section>
-  );
-}
-</file>
-
-<file path="portfolio-page/src/components/Projects.jsx">
-import React from 'react';
-
-export default function Projects() {
-  return (
-    <section id="projects" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>C1 · Projetos</div>
-      <h1>Projects Section Placeholder</h1>
-    </section>
-  );
-}
-</file>
-
 <file path="portfolio-page/src/hooks/useLanguage.js">
 import { useState, useEffect } from 'react';
 
@@ -411,170 +339,6 @@ export function useTheme() {
 
   return { theme, toggleTheme };
 }
-</file>
-
-<file path="portfolio-page/src/data.js">
-export const projectsData = {
-    pt: [
-      {
-        id: "fastapi-genai",
-        title: "fastapi-genai-project",
-        tags: ["Python", "FastAPI", "GroqCloud (Llama 3.3)", "PostgreSQL", "Docker", "RAG"],
-        description: "Assistente de pesquisa com RAG (Retrieval-Augmented Generation) para consultas em linguagem natural sobre documentos financeiros, com respostas fundamentadas e citações verificáveis. Envolveu migrar toda a stack de IA de modelos pagos (OpenAI) para uma alternativa gratuita (GroqCloud/Llama), exigindo reimplementar a lógica de extração de respostas estruturadas.",
-        github: "https://github.com/bruno-reichert/fastapi-genai-project",
-        demo: null
-      },
-      {
-        id: "bookly",
-        title: "Bookly",
-        tags: ["Python", "FastAPI", "SQLModel", "PostgreSQL", "JWT", "Pytest"],
-        description: "API REST para um serviço de avaliações de livros, com autenticação JWT, tratamento de exceções customizado, testes automatizados, e migrações de banco de dados via Alembic. Adaptada para funcionar sem tarefas assíncronas em background, devido a limitações do plano gratuito da plataforma de deploy.",
-        github: "https://github.com/bruno-reichert/fastapi-beyond-CRUD",
-        demo: null
-      },
-      {
-        id: "fastapi-webapp",
-        title: "FastAPI-Web-App",
-        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Google Cloud Run"],
-        description: "Aplicação web full-stack de blog, construída inteiramente com FastAPI — back-end e frontend (renderizado no servidor) na mesma aplicação Python. Inclui autenticação, recuperação de senha por e-mail, upload de foto de perfil via Amazon S3, e deploy em produção via Docker e Google Cloud Run.",
-        github: "https://github.com/bruno-reichert/FastAPI-Web-App",
-        demo: "https://fastapi-service-605488623154.us-east4.run.app/"
-      },
-      {
-        id: "react-course",
-        title: "react-course (App de Filmes)",
-        tags: ["React", "Vite", "TailwindCSS", "TMDB API", "Appwrite"],
-        description: "Aplicação de descoberta de filmes construída com React e Vite, consumindo a API do TMDB, com um algoritmo de tendências baseado em buscas dos usuários via Appwrite.",
-        github: "https://github.com/bruno-reichert/react-course",
-        demo: null
-      }
-    ],
-    en: [
-      {
-        id: "fastapi-genai",
-        title: "fastapi-genai-project",
-        tags: ["Python", "FastAPI", "GroqCloud (Llama 3.3)", "PostgreSQL", "Docker", "RAG"],
-        description: "A RAG (Retrieval-Augmented Generation) research assistant for natural-language queries over financial documents, returning grounded, citable answers. Involved migrating the entire AI stack from paid models (OpenAI) to a free alternative (GroqCloud/Llama), which required rebuilding the structured-answer extraction logic from scratch.",
-        github: "https://github.com/bruno-reichert/fastapi-genai-project",
-        demo: null
-      },
-      {
-        id: "bookly",
-        title: "Bookly",
-        tags: ["Python", "FastAPI", "SQLModel", "PostgreSQL", "JWT", "Pytest"],
-        description: "A REST API for a book review service, with JWT authentication, custom exception handling, automated tests, and database migrations via Alembic. Adapted to run without background async tasks due to free-tier deployment platform limitations.",
-        github: "https://github.com/bruno-reichert/fastapi-beyond-CRUD",
-        demo: null
-      },
-      {
-        id: "fastapi-webapp",
-        title: "FastAPI-Web-App",
-        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Google Cloud Run"],
-        description: "A full-stack blog web app built entirely with FastAPI — back-end and server-rendered front-end in the same Python application. Includes authentication, email password recovery, profile picture uploads via Amazon S3, and a production deploy via Docker and Google Cloud Run.",
-        github: "https://github.com/bruno-reichert/FastAPI-Web-App",
-        demo: "https://fastapi-service-605488623154.us-east4.run.app/"
-      },
-      {
-        id: "react-course",
-        title: "react-course (Movie App)",
-        tags: ["React", "Vite", "TailwindCSS", "TMDB API", "Appwrite"],
-        description: "A movie discovery app built with React and Vite, consuming the TMDB API, with a trending-searches algorithm powered by Appwrite.",
-        github: "https://github.com/bruno-reichert/react-course",
-        demo: null
-      }
-    ]
-  };
-  
-  export const certificationsData = {
-    pt: [
-      {
-        title: "Cientista de Dados Associado em Python",
-        date: "Em curso",
-        description: "Pandas, NumPy, Matplotlib, Seaborn, estatística, introdução a machine learning.",
-        url: null,
-        inProgress: true
-      },
-      {
-        title: "Python Developer",
-        date: "Out. 2025",
-        description: "Estruturas de dados e algoritmos, complexidade, POO avançada.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/ef6134b92b67f405cba1b9f7d0c354e38c35d947", // Example credential placeholder
-        inProgress: false
-      },
-      {
-        title: "Associate Python Developer",
-        date: "Set. 2025",
-        description: "POO, decorators, context managers, regex.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/d90e9d6d5b06f52a788e0ab41f48744b1c855ba6",
-        inProgress: false
-      },
-      {
-        title: "Python Programming",
-        date: "Set. 2025",
-        description: "Módulos, iteradores, list comprehensions.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/8e906e788c0350d7a6e1a4dfcb2983bf9e2c4cb7",
-        inProgress: false
-      },
-      {
-        title: "Python Programming Fundamentals",
-        date: "Ago. 2025",
-        description: "Fundamentos da linguagem.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4bf6db4a5b48e3d0628bc73ca55307ab886c90b6",
-        inProgress: false
-      },
-      {
-        title: "Associate AI Engineer for Developers",
-        date: "Jul. 2025",
-        description: "LLMs via API, prompt engineering, embeddings, RAG, LangChain.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4c3f7cb85b06f52e5a88e0ab41f4875a1c865fa7",
-        inProgress: false
-      }
-    ],
-    en: [
-      {
-        title: "Associate Data Scientist in Python",
-        date: "In progress",
-        description: "Pandas, NumPy, Matplotlib, Seaborn, statistics, introduction to machine learning.",
-        url: null,
-        inProgress: true
-      },
-      {
-        title: "Python Developer",
-        date: "Oct. 2025",
-        description: "Data structures and algorithms, time complexity, advanced OOP.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/ef6134b92b67f405cba1b9f7d0c354e38c35d947",
-        inProgress: false
-      },
-      {
-        title: "Associate Python Developer",
-        date: "Sep. 2025",
-        description: "OOP, decorators, context managers, regex.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/d90e9d6d5b06f52a788e0ab41f48744b1c855ba6",
-        inProgress: false
-      },
-      {
-        title: "Python Programming",
-        date: "Sep. 2025",
-        description: "Modules, iterators, list comprehensions.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/8e906e788c0350d7a6e1a4dfcb2983bf9e2c4cb7",
-        inProgress: false
-      },
-      {
-        title: "Python Programming Fundamentals",
-        date: "Aug. 2025",
-        description: "Language fundamentals.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4bf6db4a5b48e3d0628bc73ca55307ab886c90b6",
-        inProgress: false
-      },
-      {
-        title: "Associate AI Engineer for Developers",
-        date: "Jul. 2025",
-        description: "LLMs via API, prompt engineering, embeddings, RAG, LangChain.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4c3f7cb85b06f52e5a88e0ab41f4875a1c865fa7",
-        inProgress: false
-      }
-    ]
-  };
 </file>
 
 <file path="portfolio-page/src/i18n.js">
@@ -900,114 +664,616 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 </file>
 
-<file path="phase2p1.sh">
-# 1. Create the components directory inside your React project
-mkdir -p portfolio-page/src/components
-
-# 2. Create Header.jsx shell
-cat << 'EOF' > portfolio-page/src/components/Header.jsx
-import React from 'react';
-
-export default function Header() {
-  return (
-    <header style={{ padding: '20px', borderBottom: '1px solid var(--border)' }}>
-      <nav>
-        <span>&gt; bruno</span> | Navigation Placeholder
-      </nav>
-    </header>
-  );
-}
-EOF
-
-# 3. Create Hero.jsx shell
-cat << 'EOF' > portfolio-page/src/components/Hero.jsx
-import React from 'react';
-
-export default function Hero() {
-  return (
-    <section id="hero" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>A1 · Início</div>
-      <h1>Hero Section Placeholder</h1>
-    </section>
-  );
-}
-EOF
-
-# 4. Create About.jsx shell
-cat << 'EOF' > portfolio-page/src/components/About.jsx
-import React from 'react';
-
-export default function About() {
-  return (
-    <section id="about" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>B1 · Sobre</div>
-      <h1>About Section Placeholder</h1>
-    </section>
-  );
-}
-EOF
-
-# 5. Create Projects.jsx shell
-cat << 'EOF' > portfolio-page/src/components/Projects.jsx
-import React from 'react';
-
-export default function Projects() {
-  return (
-    <section id="projects" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>C1 · Projetos</div>
-      <h1>Projects Section Placeholder</h1>
-    </section>
-  );
-}
-EOF
-
-# 6. Create Certifications.jsx shell
-cat << 'EOF' > portfolio-page/src/components/Certifications.jsx
-import React from 'react';
-
-export default function Certifications() {
-  return (
-    <section id="certifications" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>D1 · Certificações</div>
-      <h1>Certifications Section Placeholder</h1>
-    </section>
-  );
-}
-EOF
-
-# 7. Create Contact.jsx shell
-cat << 'EOF' > portfolio-page/src/components/Contact.jsx
-import React from 'react';
-
-export default function Contact() {
-  return (
-    <section id="contact" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>E1 · Contato</div>
-      <h1>Contact Section Placeholder</h1>
-    </section>
-  );
-}
-EOF
-
-# 8. Create Footer.jsx shell
-cat << 'EOF' > portfolio-page/src/components/Footer.jsx
-import React from 'react';
-
-export default function Footer() {
-  return (
-    <footer style={{ padding: '20px', textAlign: 'center' }}>
-      <p>Footer Placeholder</p>
-    </footer>
-  );
-}
-EOF
-
-echo "All component shells have been successfully created inside portfolio-page/src/components!"
-</file>
-
 <file path="README.md">
 # portfolio page
 portfolio page
+</file>
+
+<file path="portfolio-page/src/components/About.jsx">
+import React from 'react';
+import { translations } from '../i18n';
+
+export default function About({ language }) {
+  const text = translations[language].about;
+
+  return (
+    <section id="about" className="about-section">
+      
+      {/* Spreadsheet Eyebrow */}
+      <div className="eyebrow-cell">
+        B1 · {language === 'pt' ? 'Sobre' : 'About'}
+      </div>
+
+      <div className="about-grid">
+        
+        {/* Left column: Section Title */}
+        <div className="about-title-col">
+          <h2 className="about-heading">{text.title}</h2>
+          <div className="ledger-accent-bar"></div>
+        </div>
+
+        {/* Right column: Narrative Bio Text */}
+        <div className="about-text-col">
+          <p className="about-bio-text">
+            {text.text}
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Certifications.jsx">
+import React from 'react';
+import { translations } from '../i18n';
+import { certificationsData } from '../data';
+
+export default function Certifications({ language }) {
+  const text = translations[language].certifications;
+  const certs = certificationsData[language];
+
+  return (
+    <section id="certifications" className="certifications-section">
+      
+      {/* Spreadsheet Eyebrow */}
+      <div className="eyebrow-cell">
+        D1 · {language === 'pt' ? 'Certificações' : 'Certifications'}
+      </div>
+
+      {/* Header Area & Note */}
+      <div className="certs-header">
+        <h2 className="certs-heading">{text.title}</h2>
+        <p className="certs-note">
+          <span className="note-icon">ℹ</span> {text.note}
+        </p>
+      </div>
+
+      {/* Structured Ledger Table */}
+      <div className="certs-table">
+        {certs.map((cert, idx) => (
+          <div key={idx} className="cert-row">
+            
+            {/* Column 1: Date / Timeline */}
+            <div className="cert-col cert-date">
+              {cert.date}
+            </div>
+
+            {/* Column 2: Credentials and details */}
+            <div className="cert-col cert-info">
+            <h3 className="cert-title">
+                {cert.url ? (
+                  <a 
+                    href={cert.url.startsWith('http') ? cert.url : `${import.meta.env.BASE_URL}${cert.url}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="cert-link"
+                  >
+                    {cert.title} <span className="cert-link-arrow">&nearr;</span>
+                  </a>
+                ) : (
+                  cert.title
+                )}
+              </h3>
+              <p className="cert-description">{cert.description}</p>
+            </div>
+
+            {/* Column 3: Badge Status */}
+            <div className="cert-col cert-status">
+              {cert.inProgress ? (
+                <span className="badge progress">
+                  {text.statusEnCourse}
+                </span>
+              ) : (
+                <span className="badge completed">
+                  {language === 'pt' ? 'CONCLUÍDO' : 'COMPLETED'}
+                </span>
+              )}
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Contact.jsx">
+import React from 'react';
+import { translations } from '../i18n';
+
+export default function Contact({ language }) {
+  const text = translations[language].contact;
+
+  return (
+    <section id="contact" className="contact-section">
+      
+      {/* Spreadsheet Eyebrow */}
+      <div className="eyebrow-cell">
+        E1 · {language === 'pt' ? 'Contato' : 'Contact'}
+      </div>
+
+      <div className="contact-grid">
+        
+        {/* Left Column: Heading and Location */}
+        <div className="contact-info-col">
+          <h2 className="contact-heading">{text.title}</h2>
+          
+          <div className="location-badge">
+            <span className="location-icon">📍</span>
+            <div className="location-details">
+              <span className="location-label">LOCATION_DB</span>
+              <span className="location-value">{text.location}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column: Direct Command Links */}
+        <div className="contact-links-col">
+          
+          <div className="contact-row-link">
+            <span className="contact-command">mailto:</span>
+            <a 
+              href="mailto:brunowasborn2rock@gmail.com" 
+              className="contact-address-link"
+            >
+              brunowasborn2rock@gmail.com
+            </a>
+          </div>
+
+          <div className="contact-row-link">
+            <span className="contact-command">linkedin:</span>
+            <a 
+              href="https://www.linkedin.com/in/brunobennoreichert" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="contact-address-link"
+            >
+              in/brunobennoreichert
+            </a>
+          </div>
+
+          <div className="contact-row-link">
+            <span className="contact-command">github:</span>
+            <a 
+              href="https://github.com/bruno-reichert" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="contact-address-link"
+            >
+              github.com/bruno-reichert
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Footer.jsx">
+import React from 'react';
+import { translations } from '../i18n';
+
+export default function Footer({ language }) {
+  const text = translations[language].footer;
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="site-footer">
+      <div className="footer-container">
+        
+        {/* Left: Copyright tag */}
+        <p className="copyright-text">
+          &copy; {currentYear} Bruno Benno Reichert
+        </p>
+
+        {/* Right: Dynamic Back to Top anchor */}
+        <a href="#hero" className="back-to-top-link">
+          <span className="footer-arrow">▲</span> {text.backToTop}
+        </a>
+
+      </div>
+    </footer>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Hero.jsx">
+import React, { useState, useEffect } from 'react';
+import { translations } from '../i18n';
+
+export default function Hero({ language }) {
+  const text = translations[language].hero;
+  const commandToType = "whoami";
+
+  // Helper to check for reduced motion media settings safely
+  const checkReducedMotion = () => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  };
+
+  // 1. Initialize states directly based on user's system preferences
+  const [typedCommand, setTypedCommand] = useState(() => {
+    return checkReducedMotion() ? commandToType : '';
+  });
+  
+  const [isTypingComplete, setIsTypingComplete] = useState(() => {
+    return checkReducedMotion();
+  });
+
+  // The effect now ONLY handles dynamic animation transitions cleanly
+  useEffect(() => {
+    // If state was initialized as complete (due to reduced motion), skip typing
+    if (isTypingComplete) return;
+
+    const typingInterval = setInterval(() => {
+      setTypedCommand((prev) => {
+        // Use the current typed string's length to determine the next character index
+        if (prev.length < commandToType.length) {
+          return prev + commandToType.charAt(prev.length);
+        } else {
+          // Once the string matches the length of the command, stop the interval
+          clearInterval(typingInterval);
+          setIsTypingComplete(true);
+          return prev;
+        }
+      });
+    }, 100);
+
+    return () => clearInterval(typingInterval);
+  }, [isTypingComplete]);
+
+  return (
+    <section id="hero" className="hero-section">
+      <div className="eyebrow-cell">
+        A1 · {language === 'pt' ? 'Início' : 'Home'}
+      </div>
+
+      <div className="hero-content">
+        
+        <div className="terminal-box">
+          <div className="terminal-header">
+            <span className="terminal-dot red"></span>
+            <span className="terminal-dot yellow"></span>
+            <span className="terminal-dot green"></span>
+            <span className="terminal-title">bash</span>
+          </div>
+          <div className="terminal-body">
+            <span className="terminal-prompt-user">bruno@portfolio:~$</span>{' '}
+            <span className="terminal-typed-command">{typedCommand}</span>
+            {!isTypingComplete && <span className="terminal-cursor">█</span>}
+          </div>
+        </div>
+
+        <div className={`hero-details ${isTypingComplete ? 'fade-in' : 'hidden'}`}>
+          <h1 className="hero-name">Bruno Benno Reichert</h1>
+          <h2 className="hero-tagline">{text.tagline}</h2>
+          <p className="hero-subline">{text.subline}</p>
+          
+          <div className="hero-actions">
+            <a href="#projects" className="cta-btn primary">
+              {text.ctaProjects}
+            </a>
+            <a href="https://github.com/bruno-reichert" target="_blank" rel="noopener noreferrer" className="cta-btn secondary">
+              {text.ctaGithub}
+            </a>
+            <a href="https://www.linkedin.com/in/brunobennoreichert" target="_blank" rel="noopener noreferrer" className="cta-btn secondary">
+              {text.ctaLinkedin}
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/components/Projects.jsx">
+import React from 'react';
+import { translations } from '../i18n';
+import { projectsData } from '../data';
+
+export default function Projects({ language }) {
+  const text = translations[language].projects;
+  const projects = projectsData[language];
+
+  return (
+    <section id="projects" className="projects-section">
+      
+      {/* Spreadsheet Eyebrow */}
+      <div className="eyebrow-cell">
+        C1 · {language === 'pt' ? 'Projetos' : 'Projects'}
+      </div>
+
+      <div className="section-header-area">
+        <h2 className="projects-heading">{text.title}</h2>
+      </div>
+
+      {/* Grid of Project Cards */}
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <article key={project.id} className="project-card">
+            
+            <div className="card-top">
+              {/* Tech stack tags */}
+              <div className="project-tags">
+                {project.tags.map((tag, idx) => (
+                  <span key={idx} className="tech-tag">{tag}</span>
+                ))}
+              </div>
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+            </div>
+
+            {/* Action Links */}
+            <div className="project-links">
+              <a 
+                href={project.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="project-link code"
+              >
+                <span className="link-prompt">&gt;</span> {text.codeLink}
+              </a>
+              
+              {project.demo && (
+                <a 
+                  href={project.demo} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="project-link demo"
+                >
+                  <span className="link-prompt">&gt;</span> {text.demoLink}
+                </a>
+              )}
+            </div>
+
+          </article>
+        ))}
+      </div>
+
+      {/* DataCamp Projects Footer Highlight */}
+      <div className="datacamp-callout">
+        <p className="datacamp-text">
+          {text.datacampLink}{' '}
+          <a 
+            href="https://github.com/bruno-reichert/datacamp-projects" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="datacamp-link"
+          >
+            github.com/bruno-reichert/datacamp-projects &rarr;
+          </a>
+        </p>
+      </div>
+
+    </section>
+  );
+}
+</file>
+
+<file path="portfolio-page/src/App.jsx">
+import React from 'react';
+import { useTheme } from './hooks/useTheme';
+import { useLanguage } from './hooks/useLanguage';
+
+// Import component shells
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+// Styling
+import './App.css';
+
+function App() {
+  const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage } = useLanguage();
+
+  return (
+    <>
+      {/* 
+        The Header receives the theme/language state and their toggle functions
+        so the user can interact with the switch controls.
+      */}
+      <Header 
+        theme={theme} 
+        toggleTheme={toggleTheme} 
+        language={language} 
+        toggleLanguage={toggleLanguage} 
+      />
+      
+      {/* Main layout container wrapping all sections sequentially */}
+      <main>
+        <Hero language={language} />
+        <About language={language} />
+        <Projects language={language} />
+        <Certifications language={language} />
+        <Contact language={language} />
+      </main>
+
+      <Footer language={language} />
+    </>
+  );
+}
+
+export default App;
+</file>
+
+<file path="portfolio-page/src/data.js">
+export const projectsData = {
+    pt: [
+      {
+        id: "fastapi-genai",
+        title: "fastapi-genai-project",
+        tags: ["Python", "FastAPI", "GroqCloud (Llama 3.3)", "PostgreSQL", "Docker", "RAG"],
+        description: "Assistente de pesquisa com RAG (Retrieval-Augmented Generation) para consultas em linguagem natural sobre documentos financeiros, com respostas fundamentadas e citações verificáveis. Envolveu migrar toda a stack de IA de modelos pagos (OpenAI) para uma alternativa gratuita (GroqCloud/Llama), exigindo reimplementar a lógica de extração de respostas estruturadas.",
+        github: "https://github.com/bruno-reichert/fastapi-genai-project",
+        demo: null
+      },
+      {
+        id: "bookly",
+        title: "Bookly",
+        tags: ["Python", "FastAPI", "SQLModel", "PostgreSQL", "JWT", "Pytest"],
+        description: "API REST para um serviço de avaliações de livros, com autenticação JWT, tratamento de exceções customizado, testes automatizados, e migrações de banco de dados via Alembic. Adaptada para funcionar sem tarefas assíncronas em background, devido a limitações do plano gratuito da plataforma de deploy.",
+        github: "https://github.com/bruno-reichert/fastapi-beyond-CRUD",
+        demo: null
+      },
+      {
+        id: "fastapi-webapp",
+        title: "FastAPI-Web-App",
+        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Google Cloud Run"],
+        description: "Aplicação web full-stack de blog, construída inteiramente com FastAPI — back-end e frontend (renderizado no servidor) na mesma aplicação Python. Inclui autenticação, recuperação de senha por e-mail, upload de foto de perfil via Amazon S3, e deploy em produção via Docker e Google Cloud Run.",
+        github: "https://github.com/bruno-reichert/FastAPI-Web-App",
+        demo: "https://fastapi-service-605488623154.us-east4.run.app/"
+      },
+      {
+        id: "react-course",
+        title: "react-course (App de Filmes)",
+        tags: ["React", "Vite", "TailwindCSS", "TMDB API", "Appwrite"],
+        description: "Aplicação de descoberta de filmes construída com React e Vite, consumindo a API do TMDB, com um algoritmo de tendências baseado em buscas dos usuários via Appwrite.",
+        github: "https://github.com/bruno-reichert/react-course",
+        demo: null
+      }
+    ],
+    en: [
+      {
+        id: "fastapi-genai",
+        title: "fastapi-genai-project",
+        tags: ["Python", "FastAPI", "GroqCloud (Llama 3.3)", "PostgreSQL", "Docker", "RAG"],
+        description: "A RAG (Retrieval-Augmented Generation) research assistant for natural-language queries over financial documents, returning grounded, citable answers. Involved migrating the entire AI stack from paid models (OpenAI) to a free alternative (GroqCloud/Llama), which required rebuilding the structured-answer extraction logic from scratch.",
+        github: "https://github.com/bruno-reichert/fastapi-genai-project",
+        demo: null
+      },
+      {
+        id: "bookly",
+        title: "Bookly",
+        tags: ["Python", "FastAPI", "SQLModel", "PostgreSQL", "JWT", "Pytest"],
+        description: "A REST API for a book review service, with JWT authentication, custom exception handling, automated tests, and database migrations via Alembic. Adapted to run without background async tasks due to free-tier deployment platform limitations.",
+        github: "https://github.com/bruno-reichert/fastapi-beyond-CRUD",
+        demo: null
+      },
+      {
+        id: "fastapi-webapp",
+        title: "FastAPI-Web-App",
+        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Google Cloud Run"],
+        description: "A full-stack blog web app built entirely with FastAPI — back-end and server-rendered front-end in the same Python application. Includes authentication, email password recovery, profile picture uploads via Amazon S3, and a production deploy via Docker and Google Cloud Run.",
+        github: "https://github.com/bruno-reichert/FastAPI-Web-App",
+        demo: "https://fastapi-service-605488623154.us-east4.run.app/"
+      },
+      {
+        id: "react-course",
+        title: "react-course (Movie App)",
+        tags: ["React", "Vite", "TailwindCSS", "TMDB API", "Appwrite"],
+        description: "A movie discovery app built with React and Vite, consuming the TMDB API, with a trending-searches algorithm powered by Appwrite.",
+        github: "https://github.com/bruno-reichert/react-course",
+        demo: null
+      }
+    ]
+  };
+  
+  export const certificationsData = {
+    pt: [
+      {
+        title: "Cientista de Dados Associado em Python",
+        date: "Em curso",
+        description: "Pandas, NumPy, Matplotlib, Seaborn, estatística, introdução a machine learning.",
+        url: null,
+        inProgress: true
+      },
+      {
+        title: "Python Developer",
+        date: "Out. 2025",
+        description: "Estruturas de dados e algoritmos, complexidade, POO avançada.",
+        url: "credentials/pythondeveloper.pdf",
+        inProgress: false
+      },
+      {
+        title: "Associate Python Developer",
+        date: "Set. 2025",
+        description: "POO, decorators, context managers, regex.",
+        url: "credentials/assocpythondev.pdf",
+        inProgress: false
+      },
+      {
+        title: "Python Programming",
+        date: "Set. 2025",
+        description: "Módulos, iteradores, list comprehensions.",
+        url: "credentials/pythonprogramming.pdf",
+        inProgress: false
+      },
+      {
+        title: "Python Programming Fundamentals",
+        date: "Ago. 2025",
+        description: "Fundamentos da linguagem.",
+        url: "credentials/pythonprogrammingfundamentals.pdf",
+        inProgress: false
+      },
+      {
+        title: "Associate AI Engineer for Developers",
+        date: "Jul. 2025",
+        description: "LLMs via API, prompt engineering, embeddings, RAG, LangChain.",
+        url: "credentials/associateaiengineerfordevs.pdf",
+        inProgress: false
+      }
+    ],
+    en: [
+      {
+        title: "Associate Data Scientist in Python",
+        date: "In progress",
+        description: "Pandas, NumPy, Matplotlib, Seaborn, statistics, introduction to machine learning.",
+        url: null,
+        inProgress: true
+      },
+      {
+        title: "Python Developer",
+        date: "Oct. 2025",
+        description: "Data structures and algorithms, time complexity, advanced OOP.",
+        url: "credentials/pythondeveloper.pdf",
+        inProgress: false
+      },
+      {
+        title: "Associate Python Developer",
+        date: "Sep. 2025",
+        description: "OOP, decorators, context managers, regex.",
+        url: "credentials/assocpythondev.pdf",
+        inProgress: false
+      },
+      {
+        title: "Python Programming",
+        date: "Sep. 2025",
+        description: "Modules, iterators, list comprehensions.",
+        url: "credentials/pythonprogramming.pdf",
+        inProgress: false
+      },
+      {
+        title: "Python Programming Fundamentals",
+        date: "Aug. 2025",
+        description: "Language fundamentals.",
+        url: "credentials/pythonprogrammingfundamentals.pdf",
+        inProgress: false
+      },
+      {
+        title: "Associate AI Engineer for Developers",
+        date: "Jul. 2025",
+        description: "LLMs via API, prompt engineering, embeddings, RAG, LangChain.",
+        url: "credentials/associateaiengineerfordevs.pdf",
+        inProgress: false
+      }
+    ]
+  };
 </file>
 
 <file path="portfolio-page/src/App.css">
@@ -1246,57 +1512,752 @@ footer {
     display: none; /* We will stack nicely later or keep it minimal */
   }
 }
-</file>
 
-<file path="portfolio-page/src/App.jsx">
-import React from 'react';
-import { useTheme } from './hooks/useTheme';
-import { useLanguage } from './hooks/useLanguage';
-
-// Import component shells
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Certifications from './components/Certifications';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-
-// Styling
-import './App.css';
-
-function App() {
-  const { theme, toggleTheme } = useTheme();
-  const { language, toggleLanguage } = useLanguage();
-
-  return (
-    <>
-      {/* 
-        The Header receives the theme/language state and their toggle functions
-        so the user can interact with the switch controls.
-      */}
-      <Header 
-        theme={theme} 
-        toggleTheme={toggleTheme} 
-        language={language} 
-        toggleLanguage={toggleLanguage} 
-      />
-      
-      {/* Main layout container wrapping all sections sequentially */}
-      <main>
-        <Hero language={language} />
-        <About language={language} />
-        <Projects language={language} />
-        <Certifications language={language} />
-        <Contact language={language} />
-      </main>
-
-      <Footer language={language} />
-    </>
-  );
+/* Hero Section Container & Subtle Grid Pattern */
+.hero-section {
+  position: relative;
+  background-image: 
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 32px 32px; /* Evokes a subtle graph-paper or spreadsheet grid */
+  padding: 100px 0;
 }
 
-export default App;
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  z-index: 1; /* Sits cleanly above the grid background */
+}
+
+/* Terminal Shell Graphic */
+.terminal-box {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-theme);
+}
+
+.terminal-header {
+  background-color: var(--border);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Terminal controls styling */
+.terminal-dot.red { background-color: #E57373; }
+.terminal-dot.yellow { background-color: #F6D55C; }
+.terminal-dot.green { background-color: #4FAF95; }
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin-left: auto;
+}
+
+.terminal-body {
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.terminal-prompt-user {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.terminal-typed-command {
+  color: var(--ink);
+}
+
+.terminal-cursor {
+  color: var(--accent-alt);
+  animation: cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  from, to { color: transparent }
+  50% { color: var(--accent-alt) }
+}
+
+/* Reveal Transitions for Hero Details */
+.hero-details {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-details.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-details.hidden {
+  visibility: hidden;
+}
+
+/* Hero Typography */
+.hero-name {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.hero-subline {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  max-width: 650px;
+  margin-bottom: 32px;
+}
+
+/* CTA Navigation Buttons */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.cta-btn.primary {
+  background-color: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+}
+
+.cta-btn.primary:hover {
+  background-color: var(--bg);
+  color: var(--accent);
+}
+
+.cta-btn.secondary {
+  border: 1px solid var(--border);
+  color: var(--ink-muted);
+  background-color: var(--bg-alt);
+}
+
+.cta-btn.secondary:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  background-color: var(--bg);
+}
+
+/* Scaling down sizes for tablets/phones */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.5rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .hero-subline {
+    font-size: 1rem;
+  }
+}
+
+/* About Section Layout */
+.about-section {
+  padding: 80px 0;
+}
+
+/* 2-Column Grid Layout for Desktop */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left is 1/3, Right is 2/3 width */
+  gap: 48px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+/* Title Column styling */
+.about-title-col {
+  position: relative;
+}
+
+.about-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+/* Subtle accent line under heading, referencing structured layout borders */
+.ledger-accent-bar {
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+/* Bio Text Column styling */
+.about-bio-text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  text-align: justify;
+}
+
+/* Responsive collapse rules for tablets and mobile devices */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 24px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-bio-text {
+    font-size: 1rem;
+    text-align: left; /* Standard left alignment on small screens */
+  }
+}
+
+/* Projects Section Heading */
+.projects-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+/* 2-Column Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+/* Card Container Styling */
+.project-card {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, var(--transition-theme);
+}
+
+/* Hovering turns card border green (Spreadsheet cell highlight effect) */
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Tag Lists */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--accent);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Title & Description inside card */
+.project-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.project-description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+/* Link Actions bottom card */
+.project-links {
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.link-prompt {
+  color: var(--accent);
+}
+
+.project-link:hover {
+  color: var(--ink);
+}
+
+.project-link:hover .link-prompt {
+  color: var(--accent-alt);
+}
+
+/* DataCamp Projects Footer Box */
+.datacamp-callout {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--bg-alt);
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.datacamp-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+.datacamp-link {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 4px;
+  transition: color 0.2s ease;
+}
+
+.datacamp-link:hover {
+  color: var(--accent-alt);
+}
+
+/* Responsive Scaling down sizes for cards on mobile */
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Switch to 1 column on phones */
+  }
+
+  .project-card {
+    padding: 16px;
+  }
+
+  .projects-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Certifications Header Styling */
+.certs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.certs-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.certs-note {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.note-icon {
+  font-weight: 700;
+}
+
+/* Certifications Ledger Table Layout */
+.certs-table {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--bg);
+  transition: var(--transition-theme);
+}
+
+/* Individual spreadsheet-style row representation */
+.cert-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 140px; /* Layout columns widths */
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.15s ease;
+}
+
+.cert-row:last-child {
+  border-bottom: none; /* Clear bottom border of last table item */
+}
+
+/* Hovering shifts row background, mimicking tracking spreadsheet entries */
+.cert-row:hover {
+  background-color: var(--bg-alt);
+}
+
+.cert-col {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Column Type Settings */
+.cert-date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+  border-right: 1px solid var(--border);
+}
+
+.cert-info {
+  align-items: flex-start;
+}
+
+.cert-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.cert-link {
+  text-decoration: none;
+  color: var(--ink);
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cert-link:hover {
+  color: var(--accent);
+}
+
+.cert-link-arrow {
+  font-size: 0.85rem;
+  color: var(--accent-alt);
+}
+
+.cert-description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+/* Badging Status Area Column */
+.cert-status {
+  align-items: flex-end;
+  border-left: 1px solid var(--border);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.badge.completed {
+  background-color: var(--bg);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge.progress {
+  background-color: var(--accent-alt);
+  color: var(--bg);
+  border: 1px solid var(--accent-alt);
+}
+
+/* Responsive Collapse rules for tablet and phone dimensions */
+@media (max-width: 768px) {
+  .cert-row {
+    grid-template-columns: 1fr; /* Switch columns structure to linear vertical block */
+  }
+
+  .cert-col {
+    padding: 12px 16px;
+    border: none !important; /* Clear nested vertical borders inside card block */
+  }
+
+  .cert-date {
+    padding-bottom: 0;
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+
+  .cert-status {
+    align-items: flex-start; /* Left align badge indicators */
+    padding-top: 0;
+  }
+
+  .certs-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Contact Grid Configuration */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 1/3 layout for info, 2/3 for interactive links */
+  gap: 48px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+.contact-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+/* Location Record Box */
+.location-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  max-width: 320px;
+  transition: var(--transition-theme);
+}
+
+.location-icon {
+  font-size: 1.5rem;
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.location-value {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Interactive Direct Links Area */
+.contact-links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-row-link {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 12px;
+}
+
+.contact-row-link:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Monospace command prefixes */
+.contact-command {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 80px;
+  user-select: none;
+}
+
+/* Hyperlink styling and scaling animations */
+.contact-address-link {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink);
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.contact-address-link:hover {
+  color: var(--accent-alt);
+  transform: translateX(4px); /* Shifts slightly to the right to register motion */
+}
+
+/* Responsive Collapse structures for mobile viewports */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Shift layout to stack vertically */
+    gap: 32px;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .location-badge {
+    max-width: 100%; /* Spans full width on mobile devices */
+  }
+
+  .contact-row-link {
+    flex-direction: column; /* Stacks command name above link addresses on small screens */
+    gap: 4px;
+  }
+
+  .contact-address-link {
+    font-size: 1.1rem;
+    word-break: break-all; /* Prevents long emails/links from clipping layout bounds */
+  }
+}
+
+/* Footer Structural Container */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--bg);
+  transition: var(--transition-theme);
+}
+
+.footer-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Typography styles */
+.copyright-text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+/* Monospace Back-to-Top trigger */
+.back-to-top-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer-arrow {
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+
+.back-to-top-link:hover {
+  color: var(--ink);
+}
+
+.back-to-top-link:hover .footer-arrow {
+  color: var(--accent-alt);
+}
+
+/* Responsiveness adjustments for phones */
+@media (max-width: 640px) {
+  .footer-container {
+    flex-direction: column-reverse; /* Stacks text vertically on mobile with links on top */
+    gap: 16px;
+    padding: 24px 16px;
+  }
+}
 </file>
 
 </files>
