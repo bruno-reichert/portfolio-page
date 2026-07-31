@@ -233,3 +233,749 @@ footer {
     display: none; /* We will stack nicely later or keep it minimal */
   }
 }
+
+/* Hero Section Container & Subtle Grid Pattern */
+.hero-section {
+  position: relative;
+  background-image: 
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 32px 32px; /* Evokes a subtle graph-paper or spreadsheet grid */
+  padding: 100px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  z-index: 1; /* Sits cleanly above the grid background */
+}
+
+/* Terminal Shell Graphic */
+.terminal-box {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-theme);
+}
+
+.terminal-header {
+  background-color: var(--border);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Terminal controls styling */
+.terminal-dot.red { background-color: #E57373; }
+.terminal-dot.yellow { background-color: #F6D55C; }
+.terminal-dot.green { background-color: #4FAF95; }
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin-left: auto;
+}
+
+.terminal-body {
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.terminal-prompt-user {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.terminal-typed-command {
+  color: var(--ink);
+}
+
+.terminal-cursor {
+  color: var(--accent-alt);
+  animation: cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  from, to { color: transparent }
+  50% { color: var(--accent-alt) }
+}
+
+/* Reveal Transitions for Hero Details */
+.hero-details {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.hero-details.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-details.hidden {
+  visibility: hidden;
+}
+
+/* Hero Typography */
+.hero-name {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.hero-subline {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  max-width: 650px;
+  margin-bottom: 32px;
+}
+
+/* CTA Navigation Buttons */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.cta-btn.primary {
+  background-color: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+}
+
+.cta-btn.primary:hover {
+  background-color: var(--bg);
+  color: var(--accent);
+}
+
+.cta-btn.secondary {
+  border: 1px solid var(--border);
+  color: var(--ink-muted);
+  background-color: var(--bg-alt);
+}
+
+.cta-btn.secondary:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  background-color: var(--bg);
+}
+
+/* Scaling down sizes for tablets/phones */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.5rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .hero-subline {
+    font-size: 1rem;
+  }
+}
+
+/* About Section Layout */
+.about-section {
+  padding: 80px 0;
+}
+
+/* 2-Column Grid Layout for Desktop */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left is 1/3, Right is 2/3 width */
+  gap: 48px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+/* Title Column styling */
+.about-title-col {
+  position: relative;
+}
+
+.about-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+/* Subtle accent line under heading, referencing structured layout borders */
+.ledger-accent-bar {
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+/* Bio Text Column styling */
+.about-bio-text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  text-align: justify;
+}
+
+/* Responsive collapse rules for tablets and mobile devices */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 24px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-bio-text {
+    font-size: 1rem;
+    text-align: left; /* Standard left alignment on small screens */
+  }
+}
+
+/* Projects Section Heading */
+.projects-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+/* 2-Column Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+/* Card Container Styling */
+.project-card {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, var(--transition-theme);
+}
+
+/* Hovering turns card border green (Spreadsheet cell highlight effect) */
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Tag Lists */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--accent);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Title & Description inside card */
+.project-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.project-description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+}
+
+/* Link Actions bottom card */
+.project-links {
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.link-prompt {
+  color: var(--accent);
+}
+
+.project-link:hover {
+  color: var(--ink);
+}
+
+.project-link:hover .link-prompt {
+  color: var(--accent-alt);
+}
+
+/* DataCamp Projects Footer Box */
+.datacamp-callout {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--bg-alt);
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.datacamp-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+.datacamp-link {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 4px;
+  transition: color 0.2s ease;
+}
+
+.datacamp-link:hover {
+  color: var(--accent-alt);
+}
+
+/* Responsive Scaling down sizes for cards on mobile */
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Switch to 1 column on phones */
+  }
+
+  .project-card {
+    padding: 16px;
+  }
+
+  .projects-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Certifications Header Styling */
+.certs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.certs-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.certs-note {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.note-icon {
+  font-weight: 700;
+}
+
+/* Certifications Ledger Table Layout */
+.certs-table {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--bg);
+  transition: var(--transition-theme);
+}
+
+/* Individual spreadsheet-style row representation */
+.cert-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 140px; /* Layout columns widths */
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.15s ease;
+}
+
+.cert-row:last-child {
+  border-bottom: none; /* Clear bottom border of last table item */
+}
+
+/* Hovering shifts row background, mimicking tracking spreadsheet entries */
+.cert-row:hover {
+  background-color: var(--bg-alt);
+}
+
+.cert-col {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Column Type Settings */
+.cert-date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+  border-right: 1px solid var(--border);
+}
+
+.cert-info {
+  align-items: flex-start;
+}
+
+.cert-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.cert-link {
+  text-decoration: none;
+  color: var(--ink);
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cert-link:hover {
+  color: var(--accent);
+}
+
+.cert-link-arrow {
+  font-size: 0.85rem;
+  color: var(--accent-alt);
+}
+
+.cert-description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+/* Badging Status Area Column */
+.cert-status {
+  align-items: flex-end;
+  border-left: 1px solid var(--border);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.badge.completed {
+  background-color: var(--bg);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.badge.progress {
+  background-color: var(--accent-alt);
+  color: var(--bg);
+  border: 1px solid var(--accent-alt);
+}
+
+/* Responsive Collapse rules for tablet and phone dimensions */
+@media (max-width: 768px) {
+  .cert-row {
+    grid-template-columns: 1fr; /* Switch columns structure to linear vertical block */
+  }
+
+  .cert-col {
+    padding: 12px 16px;
+    border: none !important; /* Clear nested vertical borders inside card block */
+  }
+
+  .cert-date {
+    padding-bottom: 0;
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+
+  .cert-status {
+    align-items: flex-start; /* Left align badge indicators */
+    padding-top: 0;
+  }
+
+  .certs-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Contact Grid Configuration */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 1/3 layout for info, 2/3 for interactive links */
+  gap: 48px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+.contact-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+/* Location Record Box */
+.location-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  max-width: 320px;
+  transition: var(--transition-theme);
+}
+
+.location-icon {
+  font-size: 1.5rem;
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.location-value {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Interactive Direct Links Area */
+.contact-links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-row-link {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 12px;
+}
+
+.contact-row-link:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Monospace command prefixes */
+.contact-command {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 80px;
+  user-select: none;
+}
+
+/* Hyperlink styling and scaling animations */
+.contact-address-link {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink);
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.contact-address-link:hover {
+  color: var(--accent-alt);
+  transform: translateX(4px); /* Shifts slightly to the right to register motion */
+}
+
+/* Responsive Collapse structures for mobile viewports */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Shift layout to stack vertically */
+    gap: 32px;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .location-badge {
+    max-width: 100%; /* Spans full width on mobile devices */
+  }
+
+  .contact-row-link {
+    flex-direction: column; /* Stacks command name above link addresses on small screens */
+    gap: 4px;
+  }
+
+  .contact-address-link {
+    font-size: 1.1rem;
+    word-break: break-all; /* Prevents long emails/links from clipping layout bounds */
+  }
+}
+
+/* Footer Structural Container */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--bg);
+  transition: var(--transition-theme);
+}
+
+.footer-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Typography styles */
+.copyright-text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+/* Monospace Back-to-Top trigger */
+.back-to-top-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer-arrow {
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+
+.back-to-top-link:hover {
+  color: var(--ink);
+}
+
+.back-to-top-link:hover .footer-arrow {
+  color: var(--accent-alt);
+}
+
+/* Responsiveness adjustments for phones */
+@media (max-width: 640px) {
+  .footer-container {
+    flex-direction: column-reverse; /* Stacks text vertically on mobile with links on top */
+    gap: 16px;
+    padding: 24px 16px;
+  }
+}

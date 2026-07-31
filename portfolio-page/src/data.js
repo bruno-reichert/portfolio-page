@@ -82,35 +82,35 @@ export const projectsData = {
         title: "Python Developer",
         date: "Out. 2025",
         description: "Estruturas de dados e algoritmos, complexidade, POO avançada.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/ef6134b92b67f405cba1b9f7d0c354e38c35d947", // Example credential placeholder
+        url: "credentials/pythondeveloper.pdf",
         inProgress: false
       },
       {
         title: "Associate Python Developer",
         date: "Set. 2025",
         description: "POO, decorators, context managers, regex.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/d90e9d6d5b06f52a788e0ab41f48744b1c855ba6",
+        url: "credentials/assocpythondev.pdf",
         inProgress: false
       },
       {
         title: "Python Programming",
         date: "Set. 2025",
         description: "Módulos, iteradores, list comprehensions.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/8e906e788c0350d7a6e1a4dfcb2983bf9e2c4cb7",
+        url: "credentials/pythonprogramming.pdf",
         inProgress: false
       },
       {
         title: "Python Programming Fundamentals",
         date: "Ago. 2025",
         description: "Fundamentos da linguagem.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4bf6db4a5b48e3d0628bc73ca55307ab886c90b6",
+        url: "credentials/pythonprogrammingfundamentals.pdf",
         inProgress: false
       },
       {
         title: "Associate AI Engineer for Developers",
         date: "Jul. 2025",
         description: "LLMs via API, prompt engineering, embeddings, RAG, LangChain.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4c3f7cb85b06f52e5a88e0ab41f4875a1c865fa7",
+        url: "credentials/associateaiengineerfordevs.pdf",
         inProgress: false
       }
     ],
@@ -126,35 +126,35 @@ export const projectsData = {
         title: "Python Developer",
         date: "Oct. 2025",
         description: "Data structures and algorithms, time complexity, advanced OOP.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/ef6134b92b67f405cba1b9f7d0c354e38c35d947",
+        url: "credentials/pythondeveloper.pdf",
         inProgress: false
       },
       {
         title: "Associate Python Developer",
         date: "Sep. 2025",
         description: "OOP, decorators, context managers, regex.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/d90e9d6d5b06f52a788e0ab41f48744b1c855ba6",
+        url: "credentials/assocpythondev.pdf",
         inProgress: false
       },
       {
         title: "Python Programming",
         date: "Sep. 2025",
         description: "Modules, iterators, list comprehensions.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/8e906e788c0350d7a6e1a4dfcb2983bf9e2c4cb7",
+        url: "credentials/pythonprogramming.pdf",
         inProgress: false
       },
       {
         title: "Python Programming Fundamentals",
         date: "Aug. 2025",
         description: "Language fundamentals.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4bf6db4a5b48e3d0628bc73ca55307ab886c90b6",
+        url: "credentials/pythonprogrammingfundamentals.pdf",
         inProgress: false
       },
       {
         title: "Associate AI Engineer for Developers",
         date: "Jul. 2025",
         description: "LLMs via API, prompt engineering, embeddings, RAG, LangChain.",
-        url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/4c3f7cb85b06f52e5a88e0ab41f4875a1c865fa7",
+        url: "credentials/associateaiengineerfordevs.pdf",
         inProgress: false
       }
     ]

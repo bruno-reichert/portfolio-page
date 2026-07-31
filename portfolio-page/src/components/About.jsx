@@ -1,10 +1,34 @@
 import React from 'react';
+import { translations } from '../i18n';
 
-export default function About() {
+export default function About({ language }) {
+  const text = translations[language].about;
+
   return (
-    <section id="about" style={{ padding: '40px 20px', borderBottom: '1px solid var(--border)' }}>
-      <div>B1 · Sobre</div>
-      <h1>About Section Placeholder</h1>
+    <section id="about" className="about-section">
+      
+      {/* Spreadsheet Eyebrow */}
+      <div className="eyebrow-cell">
+        B1 · {language === 'pt' ? 'Sobre' : 'About'}
+      </div>
+
+      <div className="about-grid">
+        
+        {/* Left column: Section Title */}
+        <div className="about-title-col">
+          <h2 className="about-heading">{text.title}</h2>
+          <div className="ledger-accent-bar"></div>
+        </div>
+
+        {/* Right column: Narrative Bio Text */}
+        <div className="about-text-col">
+          <p className="about-bio-text">
+            {text.text}
+          </p>
+        </div>
+
+      </div>
+
     </section>
   );
 }
