@@ -21,6 +21,7 @@ export const translations = {
         title: "Projetos",
         datacampLink: "Veja também: 10 projetos aplicados das minhas certificações DataCamp",
         demoLink: "Demo ao vivo",
+        apiDocsLink: "Docs da API", // <-- Add this
         codeLink: "Código"
       },
       certifications: {
@@ -58,6 +59,7 @@ export const translations = {
         title: "Projects",
         datacampLink: "See also: 10 applied projects from my DataCamp certifications",
         demoLink: "Live Demo",
+        apiDocsLink: "API Docs", // <-- Add this
         codeLink: "Code"
       },
       certifications: {

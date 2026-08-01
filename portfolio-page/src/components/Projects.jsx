@@ -52,7 +52,8 @@ export default function Projects({ language }) {
                   rel="noopener noreferrer" 
                   className="project-link demo"
                 >
-                  <span className="link-prompt">&gt;</span> {text.demoLink}
+                  <span className="link-prompt">&gt;</span>{' '}
+                  {project.demoType === 'api-docs' ? text.apiDocsLink : text.demoLink}
                 </a>
               )}
             </div>

@@ -12,9 +12,11 @@ export const projectsData = {
         id: "bookly",
         title: "Bookly",
         tags: ["Python", "FastAPI", "SQLModel", "PostgreSQL", "JWT", "Pytest"],
-        description: "API REST para um serviço de avaliações de livros, com autenticação JWT, tratamento de exceções customizado, testes automatizados, e migrações de banco de dados via Alembic. Adaptada para funcionar sem tarefas assíncronas em background, devido a limitações do plano gratuito da plataforma de deploy.",
+        description: "API REST para um serviço de avaliações de livros, com autenticação JWT, tratamento de exceções customizado, testes automatizados, e migrações de banco de dados via Alembic. Adaptada para funcionar sem tarefas assíncronas em background, devido a limitações do plano gratuito da plataforma de deploy. Conta de teste para explorar endpoints autenticados sem passar pelo fluxo de verificação por e-mail (que usa uma caixa de testes/sandbox: email: demo@example.com / senha: demo1234 Nota: por estar em um plano gratuito, a primeira requisição pode levar alguns segundos enquanto o serviço 'acorda'.",
         github: "https://github.com/bruno-reichert/fastapi-beyond-CRUD",
-        demo: null
+        demo: "https://fastapi-beyond-crud-crrs.onrender.com/api/v1/docs",
+        demoType: "api-docs" // <-- Add this property flag
+
       },
       {
         id: "fastapi-webapp",
@@ -46,9 +48,11 @@ export const projectsData = {
         id: "bookly",
         title: "Bookly",
         tags: ["Python", "FastAPI", "SQLModel", "PostgreSQL", "JWT", "Pytest"],
-        description: "A REST API for a book review service, with JWT authentication, custom exception handling, automated tests, and database migrations via Alembic. Adapted to run without background async tasks due to free-tier deployment platform limitations.",
+        description: "A REST API for a book review service, with JWT authentication, custom exception handling, automated tests, and database migrations via Alembic. Adapted to run without background async tasks due to free-tier deployment platform limitations. Demo account for exploring authenticated endpoints without going through the email verification flow (which uses a sandbox inbox): email: demo@example.com / password: demo1234 Note: since this runs on a free tier, the first request may take a few seconds while the service 'wakes up.'",
         github: "https://github.com/bruno-reichert/fastapi-beyond-CRUD",
-        demo: null
+        demo: "https://fastapi-beyond-crud-crrs.onrender.com/api/v1/docs",
+        demoType: "api-docs" // <-- Add this property flag
+
       },
       {
         id: "fastapi-webapp",
