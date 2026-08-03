@@ -32,7 +32,7 @@ export const projectsData = {
         tags: ["React", "Vite", "TailwindCSS", "TMDB API", "Appwrite"],
         description: "Aplicação de descoberta de filmes construída com React e Vite, consumindo a API do TMDB, com um algoritmo de tendências baseado em buscas dos usuários via Appwrite.",
         github: "https://github.com/bruno-reichert/react-course",
-        demo: null
+        demo: "https://react-course-826h.onrender.com/"
       }
     ],
     en: [
