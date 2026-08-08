@@ -6,7 +6,7 @@ export const projectsData = {
         tags: ["Python", "FastAPI", "GroqCloud (Llama 3.3)", "PostgreSQL", "Docker", "RAG"],
         description: "Assistente de pesquisa com RAG (Retrieval-Augmented Generation) para consultas em linguagem natural sobre documentos financeiros, com respostas fundamentadas e citações verificáveis. Envolveu migrar toda a stack de IA de modelos pagos (OpenAI) para uma alternativa gratuita (GroqCloud/Llama), exigindo reimplementar a lógica de extração de respostas estruturadas.",
         github: "https://github.com/bruno-reichert/fastapi-genai-project",
-        demo: null
+        demo: "https://fastapi-genai-project-1.onrender.com"
       },
       {
         id: "bookly",
@@ -42,7 +42,7 @@ export const projectsData = {
         tags: ["Python", "FastAPI", "GroqCloud (Llama 3.3)", "PostgreSQL", "Docker", "RAG"],
         description: "A RAG (Retrieval-Augmented Generation) research assistant for natural-language queries over financial documents, returning grounded, citable answers. Involved migrating the entire AI stack from paid models (OpenAI) to a free alternative (GroqCloud/Llama), which required rebuilding the structured-answer extraction logic from scratch.",
         github: "https://github.com/bruno-reichert/fastapi-genai-project",
-        demo: null
+        demo: "https://fastapi-genai-project-1.onrender.com"
       },
       {
         id: "bookly",
