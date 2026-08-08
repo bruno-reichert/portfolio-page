@@ -21,10 +21,10 @@ export const projectsData = {
       {
         id: "fastapi-webapp",
         title: "FastAPI-Web-App",
-        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Google Cloud Run"],
-        description: "Aplicação web full-stack de blog, construída inteiramente com FastAPI — back-end e frontend (renderizado no servidor) na mesma aplicação Python. Inclui autenticação, recuperação de senha por e-mail, upload de foto de perfil via Amazon S3, e deploy em produção via Docker e Google Cloud Run.",
+        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Render"],
+        description: "Aplicação web full-stack de blog, construída inteiramente com FastAPI — back-end e frontend (renderizado no servidor) na mesma aplicação Python. Inclui autenticação, recuperação de senha por e-mail, upload de foto de perfil via Amazon S3, e deploy em produção via Docker e Render.",
         github: "https://github.com/bruno-reichert/FastAPI-Web-App",
-        demo: "https://fastapi-service-605488623154.us-east4.run.app/"
+        demo: "https://fastapi-web-app-3xta.onrender.com/"
       },
       {
         id: "react-course",
@@ -57,10 +57,10 @@ export const projectsData = {
       {
         id: "fastapi-webapp",
         title: "FastAPI-Web-App",
-        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Google Cloud Run"],
-        description: "A full-stack blog web app built entirely with FastAPI — back-end and server-rendered front-end in the same Python application. Includes authentication, email password recovery, profile picture uploads via Amazon S3, and a production deploy via Docker and Google Cloud Run.",
+        tags: ["Python", "FastAPI", "Jinja2", "PostgreSQL", "Amazon S3", "Docker", "Render"],
+        description: "A full-stack blog web app built entirely with FastAPI — back-end and server-rendered front-end in the same Python application. Includes authentication, email password recovery, profile picture uploads via Amazon S3, and a production deploy via Docker and Render.",
         github: "https://github.com/bruno-reichert/FastAPI-Web-App",
-        demo: "https://fastapi-service-605488623154.us-east4.run.app/"
+        demo: "https://fastapi-web-app-3xta.onrender.com/"
       },
       {
         id: "react-course",
